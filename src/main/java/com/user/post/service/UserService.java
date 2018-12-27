@@ -12,19 +12,31 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Properties;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class UserService.
+ */
 @Service
 public class UserService {
 
+    /** The repository. */
     @Autowired
     UserRepository repository;
 
+    /** The kafka topic name. */
     // Kafka properties
     @Value("${kafka.topic}")
     private String kafkaTopicName;
 
+    /** The kafka bootstrap servers. */
     @Value("${kafka.bootstrap.servers}")
     private String kafkaBootstrapServers;
 
+    /**
+     * Gets the users.
+     *
+     * @return the users
+     */
     public List<User> getUsers() {
 
         List<User> users = repository.findAll();
@@ -33,6 +45,12 @@ public class UserService {
 
     }
 
+    /**
+     * Post user object.
+     *
+     * @param user the user
+     * @return the string
+     */
     public String postUserObject(User user) {
 
         Properties producerProperties = new Properties();

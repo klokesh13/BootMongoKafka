@@ -8,15 +8,23 @@ import org.springframework.stereotype.Controller;
 
 import java.util.List;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class UserController.
+ */
 @Controller
 public class UserController {
 
 
+    /** The service. */
     @Autowired
     UserService service;
 
-    /*
-
+    
+    /**
+     * Gets the users.
+     *
+     * @return the users
      */
     public List<User> getUsers() {
 
@@ -31,8 +39,12 @@ public class UserController {
 
     }
 
-    /*
-
+    
+    /**
+     * Post user object.
+     *
+     * @param user the user
+     * @return the string
      */
     public String postUserObject(User user) {
 
