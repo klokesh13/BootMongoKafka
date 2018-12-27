@@ -31,7 +31,9 @@ public class BootMongoKafkaApplication {
 		//users.stream().filter(user -> user.getUserId()==105).forEach(System.out::println);
 
 		/** Iterating values to match user id and post the same object */
-		users.stream().filter(user -> user.getUserId()==105).forEach(user -> { userController.postUserObject(user); });
+		users.stream().filter(user -> user.getUserId() == 105).forEach(user -> {
+			userController.postUserObject(user);
+		});
 
 	}
 

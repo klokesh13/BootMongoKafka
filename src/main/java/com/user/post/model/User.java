@@ -118,16 +118,4 @@ public class User {
         this.objectId = objectId;
     }
 
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-     */
-    @Override
-    public String toString() {
-        return "User{" +
-                "userId=" + userId +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", place='" + place + '\'' +
-                '}';
-    }
 }
